@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import React, { useCallback, useState } from 'react';
 import { Modal } from 'shared/ui/Modal/Modal';
+import { LoginModal } from 'features/AuthByUsername/ui/LoginModal/LoginModal';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -26,10 +27,7 @@ export const Navbar = ({ className }: NavbarProps) => {
             >
                 {t('Войти')}
             </Button>
-            <Modal isOpen={isAuthModal} onClose={onToggleModal}>
-                {/* eslint-disable-next-line max-len */}
-                {t('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid commodi consequatur eligendi impedit incidunt necessitatibus possimus quis saepe sunt totam.')}
-            </Modal>
+            <LoginModal isOpen={isAuthModal} onClose={onToggleModal} />
         </div>
     );
 };
