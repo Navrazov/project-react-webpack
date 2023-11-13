@@ -48,7 +48,7 @@ export const Input = memo((props: InputProps) => {
     };
 
     const onSelect = (e: any) => {
-        setCaretPosition(e?.caret?.selectionStart || 0);
+        setCaretPosition(e?.target?.selectionStart || 0);
     };
 
     return (
@@ -73,7 +73,7 @@ export const Input = memo((props: InputProps) => {
                 {isFocused && (
                     <span
                         className={cls.caret}
-                        style={{ left: `${caretPosition * 9}px` }}
+                        style={{ left: `${caretPosition * 7.165}px` }}
                     />
                 )}
             </div>
